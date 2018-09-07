@@ -3,6 +3,7 @@
 case $1 in
 install)
     wget https://raw.githubusercontent.com/vitche/shell-storage-timeline-client/master/storage-timeline.sh -O- > /usr/bin/storage-timeline.sh
+    chmod +x /usr/bin/storage-timeline.sh
     exit 0
 esac
 
