@@ -1,5 +1,14 @@
 #!/usr/bin/env bash
 
+case $1 in
+install)
+    # cp $0 /usr/bin
+    echo $0
+    echo $1
+    echo $2
+    exit 0
+esac
+
 case $2 in
 addString)
     echo "Executing TimeLine.addString"
@@ -19,12 +28,6 @@ allNumbers)
     ;;
 schemaCreate)
     echo "Executing Schema.create"
-    ;;
-install)
-    # cp $0 /usr/bin
-    echo $0
-    echo $1
-    echo $2
     ;;
 *)
     echo "Unable to execute unknown command $2"
