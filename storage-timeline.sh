@@ -2,8 +2,7 @@
 
 case $1 in
 install)
-    # cp $0 /usr/bin
-    echo $(cat)
+    wget https://raw.githubusercontent.com/vitche/shell-storage-timeline-client/master/storage-timeline.sh -O- > /usr/bin/storage-timeline.sh
     exit 0
 esac
 
