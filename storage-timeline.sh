@@ -1,18 +1,23 @@
 #!/usr/bin/env bash
 
-case $0 in
+case $2 in
 addString)
-    echo "addString"
+    echo "Executing TimeLine.addString"
+    wget "$1/timeline/add/string" --no-check-certificate --post-data "schema=$3&timeLine=$4&value=$5"
     ;;
 addNumber)
-    echo "addNumber"
+    echo "Executing TimeLine.addNumber"
     ;;
 allStrings)
-    echo "allStrings"
+    echo "Executing TimeLine.allStrings"
     ;;
 allNumbers)
-    echo "allNumbers"
+    echo "Executing TimeLine.allNumbers"
     ;;
-timeLineCreate)
+schemaCreate)
+    echo "Executing Schema.create"
+    ;;
+*)
+    echo "Unable to execute unknown command $2"
     ;;
 esac
