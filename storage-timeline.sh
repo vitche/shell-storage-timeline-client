@@ -26,6 +26,7 @@ allNumbers)
     ;;
 schemaCreate)
     echo "Executing Schema.create"
+    wget "$1/schema/create" --no-check-certificate --post-data "schema=$3&timeLine=$4" -O-
     ;;
 *)
     echo "Unable to execute unknown command $2"
